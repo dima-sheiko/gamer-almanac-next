@@ -7,7 +7,7 @@ import debounce from '../utils/debounce';
 
 export default function Search() {
   const [value, setValue] = useState('');
-  const { setSearchQuery } = useSearch();
+  const setSearchQuery = useSearch((state) => state.setSearchQuery);
 
   const debounceSearch = useCallback(
     debounce((query) => setSearchQuery(query), 500),
