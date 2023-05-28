@@ -36,13 +36,13 @@ export default function Search() {
       />
       {value && (
         <button
-          className="absolute right-[10px] top-[15px]"
+          className="absolute right-[10px] top-2/4 -translate-y-2/4"
           onClick={clearInput}
           type="button"
         >
           <Image
-            width={20}
-            height={20}
+            width={18}
+            height={18}
             src="/x.svg"
             alt="clear search"
           />
