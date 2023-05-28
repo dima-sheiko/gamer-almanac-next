@@ -23,9 +23,9 @@ export default function RootLayout({
       className={roboto.className}
     >
       <body className="bg-emerald-100">
-        <div className="m-auto max-w-[1440px] p-8">
+        <div className="m-auto max-w-[1440px] p-5">
           <Header />
-          <main>{children}</main>
+          {children}
         </div>
       </body>
     </html>
