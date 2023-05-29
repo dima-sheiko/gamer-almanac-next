@@ -1,6 +1,7 @@
 import { Roboto_Flex } from 'next/font/google';
 import Header from '../components/header';
 import '../styles/globals.css';
+import QueryProvider from '../lib/queryProvider';
 
 export const metadata = {
   title: 'Gamer Almanac 2.0',
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body className="bg-emerald-100">
         <div className="m-auto max-w-[1440px] p-5">
           <Header />
-          {children}
+          <QueryProvider>{children}</QueryProvider>
         </div>
       </body>
     </html>
