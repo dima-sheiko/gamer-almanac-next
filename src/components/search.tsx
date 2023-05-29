@@ -25,7 +25,7 @@ export default function Search() {
   };
 
   return (
-    <div className="relative w-[300px] sm:w-[400px]">
+    <div className="relative w-full">
       <input
         className="w-full rounded-md border border-black/30 py-3 pl-5 pr-9 focus:outline-none"
         value={value}
