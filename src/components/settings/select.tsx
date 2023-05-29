@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import { Options } from '../constants/options';
+import { Options } from '../../constants/options';
 
 interface SelectProps<T> {
   id: string;

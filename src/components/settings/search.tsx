@@ -1,9 +1,7 @@
-'use client';
-
 import { ChangeEvent, useCallback, useState } from 'react';
 import Image from 'next/image';
-import { useSearch } from '../store';
-import debounce from '../utils/debounce';
+import { useSearch } from '../../store';
+import debounce from '../../utils/debounce';
 
 export default function Search() {
   const [value, setValue] = useState('');
