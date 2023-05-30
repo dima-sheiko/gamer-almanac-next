@@ -15,6 +15,7 @@ module.exports = {
         em: '1em',
       },
       gridTemplateColumns: {
+        'auto-full': 'repeat(auto-fit, minmax(100%, 400px))',
         'auto-400': 'repeat(auto-fit, 400px)',
       }
     },
