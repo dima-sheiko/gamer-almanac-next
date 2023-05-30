@@ -44,7 +44,7 @@ export default function CardContainer() {
     return (
       <div className="flex flex-col items-center gap-2 text-center text-xl">
         <p>It&apos;s empty here.</p>
-        <p>But here&apos;s a cute litle bird instead!</p>
+        <p>But here&apos;s a cute little bird instead!</p>
         <Image
           src="/bird.svg"
           alt="no data"
