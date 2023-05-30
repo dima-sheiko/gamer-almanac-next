@@ -1,12 +1,8 @@
-import { FilterParams, SortParams } from '../constants/enums';
 import { GamesData } from './types';
 
-async function getGamesData(
-  filterParam: FilterParams,
-  sortParam: SortParams,
-): Promise<GamesData[]> {
+async function getGamesData(): Promise<GamesData[]> {
   const res = await fetch(
-    `https://637bace46f4024eac21566d8.mockapi.io/games?&genre=${filterParam}&sortBy=${sortParam}`,
+    'https://637bace46f4024eac21566d8.mockapi.io/games',
   );
 
   if (!res.ok) {
