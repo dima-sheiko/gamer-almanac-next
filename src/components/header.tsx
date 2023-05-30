@@ -1,4 +1,3 @@
-import React from 'react';
 import { Silkscreen } from 'next/font/google';
 
 const silkscreen = Silkscreen({
