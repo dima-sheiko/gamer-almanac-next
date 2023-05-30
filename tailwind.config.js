@@ -14,6 +14,9 @@ module.exports = {
       backgroundSize: {
         em: '1em',
       },
+      gridTemplateColumns: {
+        'auto-400': 'repeat(auto-fit, 400px)',
+      }
     },
   },
   plugins: [],
