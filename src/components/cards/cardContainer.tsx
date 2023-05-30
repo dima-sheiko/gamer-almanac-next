@@ -1,6 +1,6 @@
 'use client';
 
-import getGamesData from '@/src/lib/getGamesData';
+import getSortedGamesData from '@/src/lib/getSortedGamesData';
 import { useFilter, useSearch, useSort } from '@/src/store';
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
@@ -17,7 +17,7 @@ export default function CardContainer() {
     isError,
   } = useQuery({
     queryKey: ['games', filterParam, sortParam],
-    queryFn: () => getGamesData(filterParam, sortParam),
+    queryFn: () => getSortedGamesData(filterParam, sortParam),
   });
 
   const content = games?.filter((game) => game.title
@@ -38,6 +38,21 @@ export default function CardContainer() {
 
   if (isError) {
     return <div className="text-xl">Whoopsie! Something went wrong 🫠</div>;
+  }
+
+  if (!content?.length) {
+    return (
+      <div className="flex flex-col items-center gap-2 text-center text-xl">
+        <p>It&apos;s empty here.</p>
+        <p>But here&apos;s a cute litle bird instead!</p>
+        <Image
+          src="/bird.svg"
+          alt="no data"
+          width={40}
+          height={40}
+        />
+      </div>
+    );
   }
 
   return (
