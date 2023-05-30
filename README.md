@@ -1,4 +1,4 @@
-# Gamer Almanac 2.0
+# Gamer Almanac <sup>2.0</sup>
 
 Gaming library app made with Next.js, TypeScript, Zustand & React Query.
 
