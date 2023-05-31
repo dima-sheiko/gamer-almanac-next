@@ -1,4 +1,7 @@
+import { notFound } from 'next/navigation';
 import getGamesData from '@/src/lib/getGamesData';
+import Screenshots from '@/src/components/game/screenshots';
+import GameDetails from '@/src/components/game/gameDetails';
 
 interface Params {
   params: {
@@ -31,6 +34,16 @@ export async function generateMetadata({ params }: Params) {
   };
 }
 
-export default function GamePage({ params }: Params) {
-  return <div>{params.id}</div>;
+export default async function GamePage({ params }: Params) {
+  const games = await getGamesData();
+  const game = games.find((x) => x.id === params.id);
+
+  if (!game) notFound();
+
+  return (
+    <main className="mt-14 flex flex-col justify-center items-center gap-10 xl:flex-row xl:mt-20">
+      <Screenshots game={game} />
+      <GameDetails game={game} />
+    </main>
+  );
 }
