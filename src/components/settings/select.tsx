@@ -27,7 +27,7 @@ export default function Select<T>({
         {label}
       </label>
       <select
-        className="w-full cursor-pointer appearance-none rounded-md border border-black/30 bg-select-arrow bg-em bg-[right_15px_center] bg-no-repeat px-5 py-3 focus:outline-none"
+        className="w-full cursor-pointer appearance-none rounded-md border border-black/30 bg-select-arrow bg-em bg-[right_15px_center] bg-no-repeat px-5 py-3 focus:outline-none dark:bg-slate-300 dark:text-slate-800"
         onChange={onSelectChange}
         id={id}
         name={id}
