@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,7 +18,7 @@ module.exports = {
       gridTemplateColumns: {
         'auto-full': 'repeat(auto-fit, minmax(100%, 400px))',
         'auto-400': 'repeat(auto-fit, 400px)',
-      }
+      },
     },
   },
   plugins: [],
