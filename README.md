@@ -1,8 +1,16 @@
 # Gamer Almanac <sup>2.0</sup>
 
-Gaming library app made with Next.js, TypeScript, Zustand & React Query.
+Gaming library app made with Next.js, TypeScript, Zustand, Tanstack Query & Tailwind.
 
-=== The app is currently under development. Please check the ```dev``` branch to track the current progress. ===
+Main features: 
+<ul>
+  <li>Searching (with debounce)</li>
+  <li>Filtering</li>
+  <li>Sorting</li>
+  <li>Dynamic Routing with caching</li>
+  <li>Light / Dark Theme</li>
+  <li>Adaptive design</li>
+</ul>
 
 ### Available Commands
 
@@ -21,3 +29,5 @@ Building the app for production to the build folder.
 npm run build
 ```
 ***
+
+👉 [Live Demo](https://gamer-almanac.vercel.app/)
