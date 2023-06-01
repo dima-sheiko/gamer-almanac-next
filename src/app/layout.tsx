@@ -1,5 +1,5 @@
 import { Roboto_Flex } from 'next/font/google';
-import Header from '../components/header';
+import Header from '../components/header/header';
 import QueryProvider from '../providers/queryProvider';
 import '../styles/globals.css';
 
@@ -23,7 +23,7 @@ export default function RootLayout({
       lang="en"
       className={roboto.className}
     >
-      <body className="bg-emerald-100">
+      <body className="bg-emerald-100 text-slate-800 dark:bg-slate-800 dark:text-emerald-300">
         <div className="m-auto max-w-[1440px] p-5">
           <Header />
           <QueryProvider>{children}</QueryProvider>

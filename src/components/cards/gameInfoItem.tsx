@@ -1,25 +1,17 @@
-import Image from 'next/image';
-
 interface GameInfoItemProps {
-  src: string;
-  alt: string;
+  id: string;
   title: string | number;
 }
 
-export default function GameInfoItem({
-  src,
-  alt,
-  title,
-}: GameInfoItemProps) {
+export default function GameInfoItem({ id, title }: GameInfoItemProps) {
   return (
     <div className="flex items-center gap-2">
-      <Image
-        className="rounded-t-md"
-        src={src}
-        alt={alt}
-        width={16}
-        height={16}
-      />
+      <svg
+        height="16"
+        width="16"
+      >
+        <use xlinkHref={`/card-sprite.svg#${id}`} />
+      </svg>
       {title}
     </div>
   );

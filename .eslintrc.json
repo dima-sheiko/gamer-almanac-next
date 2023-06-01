@@ -23,7 +23,6 @@
     ],
     "react/jsx-indent-props": [2, 2],
     "react/jsx-closing-bracket-location": [2, "tag-aligned"],
-    "no-console": "error",
     "no-unused-expressions": "off",
     "array-callback-return": "error",
     "no-restricted-globals": "warn",
