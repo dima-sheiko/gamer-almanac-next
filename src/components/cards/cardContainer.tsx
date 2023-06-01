@@ -3,7 +3,6 @@
 import getSortedGamesData from '@/src/lib/getSortedGamesData';
 import { useFilter, useSearch, useSort } from '@/src/store';
 import { useQuery } from '@tanstack/react-query';
-import Image from 'next/image';
 import Card from './card';
 import NotFound from '../404';
 
@@ -27,13 +26,13 @@ export default function CardContainer() {
 
   if (isLoading) {
     return (
-      <Image
+      <svg
         className="animate-spin self-center justify-self-center"
-        src="/loader.svg"
-        alt="loading..."
-        width={40}
-        height={40}
-      />
+        height="40"
+        width="40"
+      >
+        <use xlinkHref="/utils-sprite.svg#loader" />
+      </svg>
     );
   }
 

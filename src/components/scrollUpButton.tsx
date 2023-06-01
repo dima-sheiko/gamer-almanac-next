@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function ScrollUpButton() {
@@ -22,16 +21,16 @@ export default function ScrollUpButton() {
 
   return isVisible ? (
     <button
-      className="fixed bottom-0 right-0 animate-bounce p-4 motion-reduce:animate-none sm:p-5"
+      className="fixed bottom-0 right-0 animate-bounce p-4 motion-reduce:animate-none sm:p-5 dark:text-emerald-300"
       onClick={handleScrollUp}
       type="button"
     >
-      <Image
-        src="/arrow.svg"
-        alt="scroll up to the top"
-        width={40}
-        height={40}
-      />
+      <svg
+        height="40"
+        width="40"
+      >
+        <use xlinkHref="/utils-sprite.svg#arrow" />
+      </svg>
     </button>
   ) : null;
 }

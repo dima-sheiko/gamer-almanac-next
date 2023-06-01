@@ -25,7 +25,7 @@ export default function Search() {
   return (
     <div className="relative w-full">
       <input
-        className="w-full rounded-md border border-black/30 py-3 pl-5 pr-9 focus:outline-none"
+        className="w-full rounded-md border border-black/30 py-3 pl-5 pr-9 text-slate-800 focus:outline-none dark:bg-slate-300 dark:placeholder:text-slate-800"
         value={value}
         onChange={onInputChange}
         type="text"

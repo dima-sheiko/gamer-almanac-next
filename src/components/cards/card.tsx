@@ -10,7 +10,7 @@ interface CardProps {
 export default function Card({ game }: CardProps) {
   return (
     <Link href={`/games/${game.id}`}>
-      <div className="relative flex flex-col rounded-md bg-white shadow-md duration-500 hover:scale-105">
+      <div className="relative flex flex-col rounded-md bg-white text-slate-800 shadow-md duration-500 hover:scale-105 dark:bg-slate-300">
         <Image
           className="rounded-t-md"
           src={game.header}
@@ -24,18 +24,15 @@ export default function Card({ game }: CardProps) {
         <div className="flex flex-col justify-start gap-2 p-5">
           <p className="text-lg font-medium">{game.title}</p>
           <GameInfoItem
-            src="/wrench.svg"
-            alt="developer icon"
+            id="wrench"
             title={game.developer}
           />
           <GameInfoItem
-            src="/gamepad.svg"
-            alt="gamepad icon"
+            id="gamepad"
             title={game.genre}
           />
           <GameInfoItem
-            src="/calendar.svg"
-            alt="relase date icon"
+            id="calendar"
             title={game.year}
           />
         </div>
