@@ -13,12 +13,12 @@ export default function Header() {
     <header
       className={`${silkscreen.className} flex flex-col items-center justify-center gap-4`}
     >
-      <Link href="/">
-        <h1 className="text-center text-5xl sm:text-6xl">
+      <h1 className="text-center text-5xl sm:text-6xl">
+        <Link href="/">
           Gamer Almanac
           <sub className="align-top text-xl sm:text-2xl">2.0</sub>
-        </h1>
-      </Link>
+        </Link>
+      </h1>
       <ThemeSwitcher />
     </header>
   );
