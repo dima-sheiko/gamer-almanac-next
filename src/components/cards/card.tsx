@@ -22,7 +22,7 @@ export default function Card({ game }: ICardProps) {
           style={{ width: '100%', height: 'auto' }}
         />
         <div className="flex flex-col justify-start gap-2 p-5">
-          <p className="text-lg font-medium">{game.title}</p>
+          <h3 className="text-lg font-medium">{game.title}</h3>
           <GameInfoItem
             id="wrench"
             title={game.developer}
