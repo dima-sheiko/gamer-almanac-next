@@ -12,14 +12,14 @@ export default function ThemeSwitcher() {
     setRenderedMode(colorMode);
   }, [colorMode]);
 
-  const handleColorMode = () => {
+  const handleClick = () => {
     setColorMode(colorMode === 'light' ? 'dark' : 'light');
   };
 
   return (
     <button
       className="rounded-full"
-      onClick={handleColorMode}
+      onClick={handleClick}
       type="button"
     >
       {renderedMode === 'light' ? (

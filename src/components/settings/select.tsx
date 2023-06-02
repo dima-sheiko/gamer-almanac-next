@@ -14,7 +14,7 @@ export default function Select<T>({
   options,
   setValue,
 }: SelectProps<T>) {
-  const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value as T);
   };
 
@@ -28,7 +28,7 @@ export default function Select<T>({
       </label>
       <select
         className="w-full cursor-pointer appearance-none rounded-md border border-black/30 bg-select-arrow bg-em bg-[right_15px_center] bg-no-repeat px-5 py-3 focus:outline-none dark:bg-slate-300 dark:text-slate-800"
-        onChange={onSelectChange}
+        onChange={handleSelectChange}
         id={id}
         name={id}
       >
