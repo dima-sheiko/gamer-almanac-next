@@ -44,13 +44,14 @@ export default function CardContainer() {
   }
 
   return (
-    <div className="grid w-full grid-cols-auto-full justify-center gap-10 sm:grid-cols-auto-400">
-      {content?.map((game) => (
-        <Card
-          key={game.id}
-          game={game}
-        />
-      ))}
-    </div>
+    <section className="w-full">
+      <ul className="grid grid-cols-auto-full justify-center gap-10 sm:grid-cols-auto-400">
+        {content?.map((game) => (
+          <li key={game.id}>
+            <Card game={game} />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

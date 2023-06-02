@@ -10,7 +10,7 @@ export default function Settings() {
   const setSortParam = useSort((state) => state.setSortParam);
 
   return (
-    <div className="flex w-full max-w-[400px] flex-col items-center justify-center gap-5">
+    <form className="flex w-full max-w-[400px] flex-col items-center justify-center gap-5">
       <Search />
       <Select
         id="filter"
@@ -24,6 +24,6 @@ export default function Settings() {
         options={SortOptions}
         setValue={setSortParam}
       />
-    </div>
+    </form>
   );
 }
