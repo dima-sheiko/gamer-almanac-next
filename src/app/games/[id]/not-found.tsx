@@ -1,4 +1,4 @@
-import NotFound from '@components/404';
+import NotFound from '@components/shared/404';
 
 export default function GameNotFound() {
   return (

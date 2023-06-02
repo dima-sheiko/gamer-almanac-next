@@ -1,7 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import NotFound from '@components/404';
+import NotFound from '@components/shared/404';
 import Icon from '@components/shared/icon';
 import getSortedGamesData from '@requests/getSortedGamesData';
 import {
