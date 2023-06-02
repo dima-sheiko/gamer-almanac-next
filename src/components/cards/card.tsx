@@ -1,13 +1,13 @@
-import { GamesData } from '@/src/lib/types';
+import { IGamesData } from '@/src/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import GameInfoItem from './gameInfoItem';
 
-interface CardProps {
-  game: GamesData;
+interface ICardProps {
+  game: IGamesData;
 }
 
-export default function Card({ game }: CardProps) {
+export default function Card({ game }: ICardProps) {
   return (
     <Link href={`/games/${game.id}`}>
       <div className="relative flex flex-col rounded-md bg-white text-slate-800 shadow-md duration-500 hover:scale-105 dark:bg-slate-300">

@@ -3,7 +3,7 @@ import getGamesData from '@/src/lib/getGamesData';
 import Screenshots from '@/src/components/game/screenshots';
 import GameDetails from '@/src/components/game/gameDetails';
 
-interface Params {
+interface IParams {
   params: {
     id: string;
   };
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: Params) {
+export async function generateMetadata({ params }: IParams) {
   const games = await getGamesData();
   const { id } = params;
 
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Params) {
   };
 }
 
-export default async function GamePage({ params }: Params) {
+export default async function GamePage({ params }: IParams) {
   const games = await getGamesData();
   const game = games.find((x) => x.id === params.id);
 

@@ -1,12 +1,12 @@
 import { FilterParams, SortParams } from './enums';
 
-export interface Options {
+export interface IOptions {
   id: number;
   name: string;
   value: FilterParams | SortParams;
 }
 
-export const filterOptions: Options[] = [
+export const FilterOptions: IOptions[] = [
   { id: 1, name: 'All Genres', value: FilterParams.ALL },
   { id: 2, name: 'Action', value: FilterParams.ACTION },
   { id: 3, name: 'Shooter', value: FilterParams.SHOOTER },
@@ -18,7 +18,7 @@ export const filterOptions: Options[] = [
   { id: 9, name: 'Quest', value: FilterParams.QUEST },
 ];
 
-export const sortOptions: Options[] = [
+export const SortOptions: IOptions[] = [
   { id: 1, name: 'Title', value: SortParams.TITLE },
   { id: 2, name: 'Developer', value: SortParams.DEVELOPER },
   { id: 3, name: 'Year', value: SortParams.YEAR },

@@ -1,10 +1,10 @@
 import { ChangeEvent } from 'react';
-import { Options } from '../../constants/options';
+import { IOptions } from '../../constants/options';
 
-interface SelectProps<T> {
+interface ISelectProps<T> {
   id: string;
   label: string;
-  options: Options[];
+  options: IOptions[];
   setValue: (value: T) => void;
 }
 
@@ -13,7 +13,7 @@ export default function Select<T>({
   label,
   options,
   setValue,
-}: SelectProps<T>) {
+}: ISelectProps<T>) {
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value as T);
   };

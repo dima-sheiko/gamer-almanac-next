@@ -1,11 +1,11 @@
 import Icon from '../shared/icon';
 
-interface GameInfoItemProps {
+interface IGameInfoItemProps {
   id: string;
   title: string | number;
 }
 
-export default function GameInfoItem({ id, title }: GameInfoItemProps) {
+export default function GameInfoItem({ id, title }: IGameInfoItemProps) {
   return (
     <div className="flex items-center gap-2">
       <Icon

@@ -1,16 +1,16 @@
 import { FilterParams, SortParams } from '../constants/enums';
 
-export interface SearchStore {
+export interface ISearchStore {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
 }
 
-export interface FilterStore {
+export interface IFilterStore {
   filterParam: FilterParams;
   setFilterParam: (value: FilterParams) => void;
 }
 
-export interface SortStore {
+export interface ISortStore {
   sortParam: SortParams;
   setSortParam: (value: SortParams) => void;
 }

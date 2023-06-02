@@ -2,7 +2,7 @@
 
 import Search from './search';
 import Select from './select';
-import { filterOptions, sortOptions } from '../../constants/options';
+import { FilterOptions, SortOptions } from '../../constants/options';
 import { useFilter, useSort } from '../../store';
 
 export default function Settings() {
@@ -15,13 +15,13 @@ export default function Settings() {
       <Select
         id="filter"
         label="Filter By"
-        options={filterOptions}
+        options={FilterOptions}
         setValue={setFilterParam}
       />
       <Select
         id="sort"
         label="Sort By"
-        options={sortOptions}
+        options={SortOptions}
         setValue={setSortParam}
       />
     </div>

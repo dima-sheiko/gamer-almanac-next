@@ -1,11 +1,11 @@
-import { GamesData } from '@/src/lib/types';
+import { IGamesData } from '@/src/lib/types';
 import Icon from '../shared/icon';
 
-interface GameDetailsProps {
-  game: GamesData;
+interface IGameDetailsProps {
+  game: IGamesData;
 }
 
-export default function GameDetails({ game }: GameDetailsProps) {
+export default function GameDetails({ game }: IGameDetailsProps) {
   return (
     <div className="flex w-full flex-col gap-5 self-start xl:max-w-md">
       <h2 className="text-center text-2xl font-bold underline xl:text-start">

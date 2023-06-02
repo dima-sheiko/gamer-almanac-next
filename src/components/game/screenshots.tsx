@@ -1,15 +1,15 @@
 'use client';
 
-import { GamesData } from '@/src/lib/types';
+import { IGamesData } from '@/src/lib/types';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import Image from 'next/image';
 
-interface ScreenshotsProps {
-  game: GamesData;
+interface IScreenshotsProps {
+  game: IGamesData;
 }
 
-export default function Screenshots({ game }: ScreenshotsProps) {
+export default function Screenshots({ game }: IScreenshotsProps) {
   return (
     <div className="max-h-[435px] w-full max-w-3xl rounded-md border-2 border-black bg-black p-0 shadow-md dark:border-emerald-300">
       <Splide
