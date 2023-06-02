@@ -1,5 +1,5 @@
 import { Roboto_Flex } from 'next/font/google';
-import Header from '@components/header/header';
+import Header from '@components/header';
 import QueryProvider from '@providers/queryProvider';
 import '@styles/globals.css';
 
