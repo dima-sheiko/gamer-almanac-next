@@ -1,6 +1,6 @@
 'use client';
 
-import { IGamesData } from '@/src/lib/types';
+import { IGamesData } from '@/src/requests/types';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import Image from 'next/image';

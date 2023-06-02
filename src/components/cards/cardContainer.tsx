@@ -1,6 +1,6 @@
 'use client';
 
-import getSortedGamesData from '@/src/lib/getSortedGamesData';
+import getSortedGamesData from '@/src/requests/getSortedGamesData';
 import { useFilter, useSearch, useSort } from '@/src/store';
 import { useQuery } from '@tanstack/react-query';
 import Card from './card';

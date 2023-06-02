@@ -1,4 +1,4 @@
-import { IGamesData } from '@/src/lib/types';
+import { IGamesData } from '@/src/requests/types';
 import Icon from '../shared/icon';
 
 interface IGameDetailsProps {

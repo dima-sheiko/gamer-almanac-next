@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import getGamesData from '@/src/lib/getGamesData';
+import getGamesData from '@/src/requests/getGamesData';
 import Screenshots from '@/src/components/game/screenshots';
 import GameDetails from '@/src/components/game/gameDetails';
 

@@ -1,4 +1,4 @@
-import { IGamesData } from '@/src/lib/types';
+import { IGamesData } from '@/src/requests/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import GameInfoItem from './gameInfoItem';
