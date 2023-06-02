@@ -22,6 +22,7 @@
       }
     ],
     "react/jsx-indent-props": [2, 2],
+    "react/require-default-props": "off",
     "react/jsx-closing-bracket-location": [2, "tag-aligned"],
     "no-unused-expressions": "off",
     "array-callback-return": "error",

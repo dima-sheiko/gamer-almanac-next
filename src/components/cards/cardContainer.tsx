@@ -5,6 +5,7 @@ import { useFilter, useSearch, useSort } from '@/src/store';
 import { useQuery } from '@tanstack/react-query';
 import Card from './card';
 import NotFound from '../404';
+import Icon from '../shared/icon';
 
 export default function CardContainer() {
   const searchQuery = useSearch((state) => state.searchQuery);
@@ -26,13 +27,11 @@ export default function CardContainer() {
 
   if (isLoading) {
     return (
-      <svg
-        className="animate-spin self-center justify-self-center"
-        height="40"
+      <Icon
+        href="/icons/sprites/utils-sprite.svg#loader"
         width="40"
-      >
-        <use xlinkHref="/utils-sprite.svg#loader" />
-      </svg>
+        styles="animate-spin self-center justify-self-center"
+      />
     );
   }
 

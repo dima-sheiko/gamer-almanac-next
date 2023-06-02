@@ -2,6 +2,7 @@
 
 import useColorMode from '@/src/hooks/useColorMode';
 import { useEffect, useState } from 'react';
+import Icon from '../shared/icon';
 
 export default function ThemeSwitcher() {
   const [colorMode, setColorMode] = useColorMode();
@@ -22,19 +23,15 @@ export default function ThemeSwitcher() {
       type="button"
     >
       {renderedMode === 'light' ? (
-        <svg
-          height="24"
+        <Icon
+          href="/icons/sprites/theme-sprite.svg#moon"
           width="24"
-        >
-          <use xlinkHref="/theme-sprite.svg#moon" />
-        </svg>
+        />
       ) : (
-        <svg
-          height="24"
+        <Icon
+          href="/icons/sprites/theme-sprite.svg#sun"
           width="24"
-        >
-          <use xlinkHref="/theme-sprite.svg#sun" />
-        </svg>
+        />
       )}
     </button>
   );

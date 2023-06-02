@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Icon from './shared/icon';
 
 export default function ScrollUpButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,16 +22,14 @@ export default function ScrollUpButton() {
 
   return isVisible ? (
     <button
-      className="fixed bottom-0 right-0 animate-bounce p-4 motion-reduce:animate-none sm:p-5 dark:text-emerald-300"
+      className="fixed bottom-0 right-0 animate-bounce p-4 motion-reduce:animate-none dark:text-emerald-300 sm:p-5"
       onClick={handleScrollUp}
       type="button"
     >
-      <svg
-        height="40"
+      <Icon
+        href="icons/sprites/utils-sprite.svg#arrow"
         width="40"
-      >
-        <use xlinkHref="/utils-sprite.svg#arrow" />
-      </svg>
+      />
     </button>
   ) : null;
 }

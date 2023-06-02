@@ -1,7 +1,7 @@
 import { ChangeEvent, useCallback, useState } from 'react';
-import Image from 'next/image';
 import { useSearch } from '../../store';
 import debounce from '../../utils/debounce';
+import Icon from '../shared/icon';
 
 export default function Search() {
   const [value, setValue] = useState('');
@@ -38,11 +38,9 @@ export default function Search() {
           onClick={clearInput}
           type="button"
         >
-          <Image
-            width={18}
-            height={18}
-            src="/x.svg"
-            alt="clear search"
+          <Icon
+            width="18"
+            href="/icons/sprites/utils-sprite.svg#x"
           />
         </button>
       )}

@@ -1,5 +1,5 @@
 import { GamesData } from '@/src/lib/types';
-import Image from 'next/image';
+import Icon from '../shared/icon';
 
 interface GameDetailsProps {
   game: GamesData;
@@ -19,11 +19,9 @@ export default function GameDetails({ game }: GameDetailsProps) {
       >
         <div className="flex justify-center gap-2">
           <p>Get It on Steam</p>
-          <Image
-            src="/external-link.svg"
-            alt="link to steam"
-            width={15}
-            height={15}
+          <Icon
+            width="15"
+            href="/icons/sprites/utils-sprite.svg#external-link"
           />
         </div>
       </a>
