@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Icon from './shared/icon';
+import Icon from '@components/shared/icon';
 
 export default function ScrollUpButton() {
   const [isVisible, setIsVisible] = useState(false);

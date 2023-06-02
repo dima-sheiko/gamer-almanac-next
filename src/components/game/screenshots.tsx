@@ -1,9 +1,9 @@
 'use client';
 
-import { IGamesData } from '@/src/requests/types';
+import Image from 'next/image';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import Image from 'next/image';
+import { IGamesData } from '@requests/types';
 
 interface IScreenshotsProps {
   game: IGamesData;

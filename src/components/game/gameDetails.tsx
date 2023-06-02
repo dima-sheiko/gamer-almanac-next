@@ -1,5 +1,5 @@
-import { IGamesData } from '@/src/requests/types';
-import Icon from '../shared/icon';
+import Icon from '@components/shared/icon';
+import { IGamesData } from '@requests/types';
 
 interface IGameDetailsProps {
   game: IGamesData;

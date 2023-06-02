@@ -1,4 +1,4 @@
-import Icon from '../shared/icon';
+import Icon from '@components/shared/icon';
 
 interface IGameInfoItemProps {
   id: string;

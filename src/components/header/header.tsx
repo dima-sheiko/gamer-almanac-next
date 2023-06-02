@@ -1,5 +1,5 @@
-import { Silkscreen } from 'next/font/google';
 import Link from 'next/link';
+import { Silkscreen } from 'next/font/google';
 import ThemeSwitcher from './themeSwitcher';
 
 const silkscreen = Silkscreen({

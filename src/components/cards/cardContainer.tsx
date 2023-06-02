@@ -1,11 +1,15 @@
 'use client';
 
-import getSortedGamesData from '@/src/requests/getSortedGamesData';
-import { useFilter, useSearch, useSort } from '@/src/store';
 import { useQuery } from '@tanstack/react-query';
+import NotFound from '@components/404';
+import Icon from '@components/shared/icon';
+import getSortedGamesData from '@requests/getSortedGamesData';
+import {
+  useFilter,
+  useSearch,
+  useSort,
+} from '@store/index';
 import Card from './card';
-import NotFound from '../404';
-import Icon from '../shared/icon';
 
 export default function CardContainer() {
   const searchQuery = useSearch((state) => state.searchQuery);

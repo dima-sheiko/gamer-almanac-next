@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { FilterParams, SortParams } from '../constants/enums';
+import { FilterParams, SortParams } from '@constants/enums';
 import { IFilterStore, ISearchStore, ISortStore } from './types';
 
 export const useSearch = create<ISearchStore>((set) => ({

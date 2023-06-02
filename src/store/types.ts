@@ -1,4 +1,4 @@
-import { FilterParams, SortParams } from '../constants/enums';
+import { FilterParams, SortParams } from '@constants/enums';
 
 export interface ISearchStore {
   searchQuery: string;

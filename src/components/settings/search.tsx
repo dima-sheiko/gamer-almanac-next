@@ -1,7 +1,7 @@
 import { ChangeEvent, useCallback, useState } from 'react';
-import { useSearch } from '../../store';
-import debounce from '../../utils/debounce';
-import Icon from '../shared/icon';
+import Icon from '@components/shared/icon';
+import { useSearch } from '@store/index';
+import debounce from '@utils/debounce';
 
 export default function Search() {
   const [value, setValue] = useState('');

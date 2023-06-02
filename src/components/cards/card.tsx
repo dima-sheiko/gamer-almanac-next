@@ -1,6 +1,6 @@
-import { IGamesData } from '@/src/requests/types';
 import Image from 'next/image';
 import Link from 'next/link';
+import { IGamesData } from '@requests/types';
 import GameInfoItem from './gameInfoItem';
 
 interface ICardProps {

@@ -1,4 +1,4 @@
-import { FilterParams, SortParams } from '../constants/enums';
+import { FilterParams, SortParams } from '@constants/enums';
 import { IGamesData } from './types';
 
 async function getSortedGamesData(

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import getGamesData from '@/src/requests/getGamesData';
-import Screenshots from '@/src/components/game/screenshots';
-import GameDetails from '@/src/components/game/gameDetails';
+import Screenshots from '@components/game/screenshots';
+import GameDetails from '@components/game/gameDetails';
+import getGamesData from '@requests/getGamesData';
 
 interface IParams {
   params: {

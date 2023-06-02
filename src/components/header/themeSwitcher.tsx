@@ -1,8 +1,8 @@
 'use client';
 
-import useColorMode from '@/src/hooks/useColorMode';
 import { useEffect, useState } from 'react';
-import Icon from '../shared/icon';
+import Icon from '@components/shared/icon';
+import useColorMode from '@hooks/useColorMode';
 
 export default function ThemeSwitcher() {
   const [colorMode, setColorMode] = useColorMode();

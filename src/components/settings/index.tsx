@@ -1,9 +1,9 @@
 'use client';
 
+import { FilterOptions, SortOptions } from '@constants/options';
+import { useFilter, useSort } from '@store/index';
 import Search from './search';
 import Select from './select';
-import { FilterOptions, SortOptions } from '../../constants/options';
-import { useFilter, useSort } from '../../store';
 
 export default function Settings() {
   const setFilterParam = useFilter((state) => state.setFilterParam);
