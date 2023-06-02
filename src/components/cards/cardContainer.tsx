@@ -1,10 +1,15 @@
 'use client';
 
-import getSortedGamesData from '@/src/lib/getSortedGamesData';
-import { useFilter, useSearch, useSort } from '@/src/store';
 import { useQuery } from '@tanstack/react-query';
+import NotFound from '@components/404';
+import Icon from '@components/shared/icon';
+import getSortedGamesData from '@requests/getSortedGamesData';
+import {
+  useFilter,
+  useSearch,
+  useSort,
+} from '@store/index';
 import Card from './card';
-import NotFound from '../404';
 
 export default function CardContainer() {
   const searchQuery = useSearch((state) => state.searchQuery);
@@ -26,13 +31,11 @@ export default function CardContainer() {
 
   if (isLoading) {
     return (
-      <svg
-        className="animate-spin self-center justify-self-center"
-        height="40"
+      <Icon
+        href="/icons/sprites/utils-sprite.svg#loader"
         width="40"
-      >
-        <use xlinkHref="/utils-sprite.svg#loader" />
-      </svg>
+        styles="animate-spin self-center justify-self-center"
+      />
     );
   }
 
@@ -45,13 +48,14 @@ export default function CardContainer() {
   }
 
   return (
-    <div className="grid w-full grid-cols-auto-full justify-center gap-10 sm:grid-cols-auto-400">
-      {content?.map((game) => (
-        <Card
-          key={game.id}
-          game={game}
-        />
-      ))}
-    </div>
+    <section className="w-full">
+      <ul className="grid grid-cols-auto-full justify-center gap-10 sm:grid-cols-auto-400">
+        {content?.map((game) => (
+          <li key={game.id}>
+            <Card game={game} />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

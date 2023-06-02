@@ -1,7 +1,8 @@
 'use client';
 
-import useColorMode from '@/src/hooks/useColorMode';
 import { useEffect, useState } from 'react';
+import Icon from '@components/shared/icon';
+import useColorMode from '@hooks/useColorMode';
 
 export default function ThemeSwitcher() {
   const [colorMode, setColorMode] = useColorMode();
@@ -11,30 +12,26 @@ export default function ThemeSwitcher() {
     setRenderedMode(colorMode);
   }, [colorMode]);
 
-  const handleColorMode = () => {
+  const handleClick = () => {
     setColorMode(colorMode === 'light' ? 'dark' : 'light');
   };
 
   return (
     <button
       className="rounded-full"
-      onClick={handleColorMode}
+      onClick={handleClick}
       type="button"
     >
       {renderedMode === 'light' ? (
-        <svg
-          height="24"
+        <Icon
+          href="/icons/sprites/theme-sprite.svg#moon"
           width="24"
-        >
-          <use xlinkHref="/theme-sprite.svg#moon" />
-        </svg>
+        />
       ) : (
-        <svg
-          height="24"
+        <Icon
+          href="/icons/sprites/theme-sprite.svg#sun"
           width="24"
-        >
-          <use xlinkHref="/theme-sprite.svg#sun" />
-        </svg>
+        />
       )}
     </button>
   );

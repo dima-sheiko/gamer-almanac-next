@@ -1,36 +1,35 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Icon from '@components/shared/icon';
 
 export default function ScrollUpButton() {
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleVisibleButton = () => {
+  const handleScroll = () => {
     setIsVisible(window.scrollY > 1200);
   };
 
-  const handleScrollUp = () => {
+  const handleClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleVisibleButton);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleVisibleButton);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return isVisible ? (
     <button
-      className="fixed bottom-0 right-0 animate-bounce p-4 motion-reduce:animate-none sm:p-5 dark:text-emerald-300"
-      onClick={handleScrollUp}
+      className="fixed bottom-0 right-0 animate-bounce p-4 motion-reduce:animate-none dark:text-emerald-300 sm:p-5"
+      onClick={handleClick}
       type="button"
     >
-      <svg
-        height="40"
+      <Icon
+        href="icons/sprites/utils-sprite.svg#arrow"
         width="40"
-      >
-        <use xlinkHref="/utils-sprite.svg#arrow" />
-      </svg>
+      />
     </button>
   ) : null;
 }

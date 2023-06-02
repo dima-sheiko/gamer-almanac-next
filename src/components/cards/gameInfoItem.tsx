@@ -1,17 +1,17 @@
-interface GameInfoItemProps {
+import Icon from '@components/shared/icon';
+
+interface IGameInfoItemProps {
   id: string;
   title: string | number;
 }
 
-export default function GameInfoItem({ id, title }: GameInfoItemProps) {
+export default function GameInfoItem({ id, title }: IGameInfoItemProps) {
   return (
     <div className="flex items-center gap-2">
-      <svg
-        height="16"
+      <Icon
+        href={`/icons/sprites/card-sprite.svg#${id}`}
         width="16"
-      >
-        <use xlinkHref={`/card-sprite.svg#${id}`} />
-      </svg>
+      />
       {title}
     </div>
   );

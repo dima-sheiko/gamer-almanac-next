@@ -1,6 +1,6 @@
-import { GamesData } from './types';
+import { IGamesData } from './types';
 
-async function getGamesData(): Promise<GamesData[]> {
+async function getGamesData(): Promise<IGamesData[]> {
   const res = await fetch('https://637bace46f4024eac21566d8.mockapi.io/games', {
     next: { revalidate: 60 },
   });

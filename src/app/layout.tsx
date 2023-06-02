@@ -1,7 +1,7 @@
 import { Roboto_Flex } from 'next/font/google';
-import Header from '../components/header/header';
-import QueryProvider from '../providers/queryProvider';
-import '../styles/globals.css';
+import Header from '@components/header';
+import QueryProvider from '@providers/queryProvider';
+import '@styles/globals.css';
 
 export const metadata = {
   title: 'Gamer Almanac 2.0',

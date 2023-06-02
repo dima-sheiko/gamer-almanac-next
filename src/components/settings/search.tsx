@@ -1,7 +1,7 @@
 import { ChangeEvent, useCallback, useState } from 'react';
-import Image from 'next/image';
-import { useSearch } from '../../store';
-import debounce from '../../utils/debounce';
+import Icon from '@components/shared/icon';
+import { useSearch } from '@store/index';
+import debounce from '@utils/debounce';
 
 export default function Search() {
   const [value, setValue] = useState('');
@@ -12,12 +12,12 @@ export default function Search() {
     [],
   );
 
-  const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
     debounceSearch(e.target.value);
   };
 
-  const clearInput = () => {
+  const handleClick = () => {
     setValue('');
     setSearchQuery('');
   };
@@ -27,7 +27,7 @@ export default function Search() {
       <input
         className="w-full rounded-md border border-black/30 py-3 pl-5 pr-9 text-slate-800 focus:outline-none dark:bg-slate-300 dark:placeholder:text-slate-800"
         value={value}
-        onChange={onInputChange}
+        onChange={handleInputChange}
         type="text"
         name="search"
         placeholder="Find your favorite game..."
@@ -35,14 +35,12 @@ export default function Search() {
       {value && (
         <button
           className="absolute right-[10px] top-2/4 -translate-y-2/4"
-          onClick={clearInput}
+          onClick={handleClick}
           type="button"
         >
-          <Image
-            width={18}
-            height={18}
-            src="/x.svg"
-            alt="clear search"
+          <Icon
+            width="18"
+            href="/icons/sprites/utils-sprite.svg#x"
           />
         </button>
       )}

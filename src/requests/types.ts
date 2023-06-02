@@ -1,4 +1,4 @@
-export interface GamesData {
+export interface IGamesData {
   id: string;
   title: string;
   developer: string;
