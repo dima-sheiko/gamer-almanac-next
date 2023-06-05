@@ -34,7 +34,7 @@ export default function Search() {
       />
       {value && (
         <button
-          className="absolute right-[10px] top-2/4 -translate-y-2/4"
+          className="absolute right-[15px] top-2/4 -translate-y-2/4"
           onClick={handleClick}
           type="button"
         >
