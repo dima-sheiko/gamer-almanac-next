@@ -22,7 +22,7 @@ export default function ScrollUpButton() {
 
   return isVisible ? (
     <button
-      className="fixed bottom-0 right-0 animate-bounce p-4 motion-reduce:animate-none dark:text-emerald-300 sm:p-5"
+      className="fixed bottom-0 right-0 p-4 dark:text-emerald-300 sm:p-5"
       onClick={handleClick}
       type="button"
     >

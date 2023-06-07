@@ -8,7 +8,7 @@ interface IGameDetailsProps {
 export default function GameDetails({ game }: IGameDetailsProps) {
   return (
     <div className="flex w-full flex-col gap-5 self-start xl:max-w-md">
-      <h2 className="text-center text-2xl font-bold underline xl:text-start">
+      <h2 className="text-center text-2xl font-bold xl:text-start">
         {game.title}
       </h2>
       <p className="text-center dark:text-slate-300 xl:text-start">
