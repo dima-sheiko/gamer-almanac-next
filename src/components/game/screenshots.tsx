@@ -25,7 +25,7 @@ export default function Screenshots({ game }: IScreenshotsProps) {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto"
+              className="w-full h-[430px] max-[815px]:h-auto"
             />
           </SplideSlide>
         ))}
